@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import './Shared.css';
 import '../App.css';
+import longlogo from '../assets/longlogo.png';
 
 export default function Header() {
   return (
     <div id="header-container">
       <div id="header">
-        <div>
-          <h1 id="header-title">Code Hunters</h1>
-        </div>
+        <img id="header-logo" src={longlogo} ></img>
         <div id="nav-section">
           <ul>
             <li><Link to="/">Home</Link></li>
