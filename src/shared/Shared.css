@@ -15,9 +15,13 @@
 }
 
 #header-logo {
-   width: 35%;
+   width: 100%;
    max-width: 450px;
    min-width: 200px;
+}
+
+#logo-link {
+   width: 35%;
 }
 
 #nav-section {
@@ -63,5 +67,9 @@ a:active {
    color: black;
  }
 
-
+/* FOOTER STYLING */
+#footer-container {
+   position: sticky;
+   top: 100%;
+}
 

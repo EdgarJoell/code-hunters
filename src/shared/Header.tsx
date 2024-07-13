@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div id="header-container">
       <div id="header">
-        <img id="header-logo" src={longlogo} ></img>
+        <Link to="/" id="logo-link"><img id="header-logo" src={longlogo} ></img></Link>
         <div id="nav-section">
           <ul>
             <li><Link to="/">Home</Link></li>
