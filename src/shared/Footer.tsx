@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
 import './Shared.css';
+import stackedLogo from '../assets/stackedlogo.png';
 
 export default function Footer() {
    return (
       <div id="footer-container">
-         <h1>This is the Footer</h1>
+         <Link to="/"><img id="footer-image" src={stackedLogo} /></Link>
       </div>
    )
 }

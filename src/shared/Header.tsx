@@ -10,9 +10,9 @@ export default function Header() {
         <Link to="/" id="logo-link"><img id="header-logo" src={longlogo} ></img></Link>
         <div id="nav-section">
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/browse">Browse</Link></li>
-            <li><Link to="/featured">Featured</Link></li>
+            <li><Link to="/">HOME</Link></li>
+            <li><Link to="/browse">BROWSE</Link></li>
+            <li><Link to="/featured">FEATURED</Link></li>
           </ul>
         </div>
       </div>
