@@ -1,0 +1,17 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.posts-section {
+    width: 60%;
+}
+
+.tags-section {
+    width: 15%;
+}
+
+.third-section {
+    width: 15%;
+}
