@@ -1,4 +1,6 @@
-interface Post {
+import {Tag} from "./Tag.ts";
+
+export interface Post {
     id: number;
     title: string;
     author: string;
@@ -7,4 +9,5 @@ interface Post {
     postContent: string;
     published: boolean;
     is_latest: boolean;
+    tags: Tag[];
 }
