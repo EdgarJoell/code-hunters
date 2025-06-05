@@ -1,14 +1,17 @@
+import {Post} from "../models/Post.ts";
+
 export function getLatestPostsFromSeed(): Post[] {
     return [
         {
             id: 1,
-            title: "First Post",
-            author: "John Doe",
+            title: "My 'Getting Started' With Ruby on Rails",
+            author: "Edgar Zambrana",
             created_at: new Date(),
             updated_at: new Date(),
-            postContent: "Some Content",
+            postContent: "This crap is really stinking cool!",
             published: false,
-            is_latest: true
+            is_latest: true,
+            tags: []
         },
         {
             id: 2,
@@ -18,7 +21,8 @@ export function getLatestPostsFromSeed(): Post[] {
             updated_at: new Date(),
             postContent: "Some Content",
             published: false,
-            is_latest: true
+            is_latest: true,
+            tags: []
         },
         {
             id: 3,
@@ -28,7 +32,8 @@ export function getLatestPostsFromSeed(): Post[] {
             updated_at: new Date(),
             postContent: "Some Content",
             published: false,
-            is_latest: true
+            is_latest: true,
+            tags: []
         },
         {
             id: 4,
@@ -38,7 +43,8 @@ export function getLatestPostsFromSeed(): Post[] {
             updated_at: new Date(),
             postContent: "Some Content",
             published: false,
-            is_latest: true
+            is_latest: true,
+            tags: []
         },
         {
             id: 5,
@@ -48,7 +54,8 @@ export function getLatestPostsFromSeed(): Post[] {
             updated_at: new Date(),
             postContent: "Some Content",
             published: false,
-            is_latest: true
+            is_latest: true,
+            tags: []
         }
     ];
 }
