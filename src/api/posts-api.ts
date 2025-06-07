@@ -1,3 +1,5 @@
+import {Post} from "../models/Post.ts";
+
 const BASE_URL: string = import.meta.env.VITE_API_URL;
 
 export async function getAllPosts(): Promise<Post[]> {
