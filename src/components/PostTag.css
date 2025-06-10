@@ -1,0 +1,16 @@
+.tag {
+    font-size: small;
+    border-radius: 15px;
+    margin: 0 auto 1rem auto;
+    /*margin-bottom: 1rem;*/
+    max-height: 15px;
+    cursor: pointer;
+    padding: 1px 5px;
+}
+
+.tag > p {
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    /*margin: auto;*/
+}
