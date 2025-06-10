@@ -11,7 +11,22 @@ export function getLatestPostsFromSeed(): Post[] {
             postContent: "This crap is really stinking cool!",
             published: false,
             is_latest: true,
-            tags: []
+            tags: [
+                {
+                    id: 1,
+                    name: "Ruby",
+                    color: "rgba(227, 31, 54, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                },
+                {
+                    id: 7,
+                    name: "Rails",
+                    color: "rgba(178, 0, 0, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                }
+            ]
         },
         {
             id: 2,
@@ -22,7 +37,22 @@ export function getLatestPostsFromSeed(): Post[] {
             postContent: "Some Content",
             published: false,
             is_latest: true,
-            tags: []
+            tags: [
+                {
+                    id: 3,
+                    name: "TypeScript",
+                    color: "rgba(38, 133, 255, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                },
+                {
+                    id: 5,
+                    name: "GitHub Actions",
+                    color: "rgba(94, 94, 94, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                }
+            ]
         },
         {
             id: 3,
@@ -33,7 +63,22 @@ export function getLatestPostsFromSeed(): Post[] {
             postContent: "Some Content",
             published: false,
             is_latest: true,
-            tags: []
+            tags: [
+                {
+                    id: 1,
+                    name: "Ruby",
+                    color: "rgba(227, 31, 54, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                },
+                {
+                    id: 7,
+                    name: "Rails",
+                    color: "rgba(178, 0, 0, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                }
+            ]
         },
         {
             id: 4,
@@ -44,7 +89,22 @@ export function getLatestPostsFromSeed(): Post[] {
             postContent: "Some Content",
             published: false,
             is_latest: true,
-            tags: []
+            tags: [
+                {
+                    id: 3,
+                    name: "TypeScript",
+                    color: "rgba(38, 133, 255, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                },
+                {
+                    id: 5,
+                    name: "GitHub Actions",
+                    color: "rgba(94, 94, 94, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                }
+            ]
         },
         {
             id: 5,
@@ -55,7 +115,15 @@ export function getLatestPostsFromSeed(): Post[] {
             postContent: "Some Content",
             published: false,
             is_latest: true,
-            tags: []
+            tags: [
+                {
+                    id: 2,
+                    name: "Java",
+                    color: "rgba(255, 113, 38, 0.5)",
+                    created_at: new Date(),
+                    updated_at: new Date()
+                }
+            ]
         }
     ];
 }
