@@ -1,13 +1,19 @@
 import './PostTag.css';
 import {Tag} from "../models/Tag.ts";
+import React from "react";
 
-export default function PostTag({ name, color }: Tag) {
+interface PostTagProps {
+    tag: Tag,
+    onClick?: React.MouseEventHandler<HTMLDivElement>;
+}
+
+export default function PostTag({ tag, onClick }: PostTagProps) {
     return (
-        <div style={{
-            backgroundColor: color,
-            border: `${color} solid 2px`,
+        <div onClick={onClick} style={{
+            backgroundColor: tag.color,
+            border: `${tag.color} solid 2px`,
         }} className="tag">
-            <p>{ name }</p>
+            <p>{ tag.name }</p>
         </div>
     )
 }
