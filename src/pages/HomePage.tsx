@@ -11,6 +11,7 @@ export default function Home() {
     const [ latestPosts, setLatestPosts ] = useState<Post[]>([])
     const [ loading, setLoading ] = useState<boolean>(true);
     const [ tags, setTags ] = useState<Tag[]>([]);
+    const [ filteredTags, setFilteredTags ] = useState<Tag[]>([]);
 
     useEffect(() => {
         async function fetchLatest() {
@@ -47,6 +48,16 @@ export default function Home() {
         loadTags();
     }, [latestPosts]);
 
+    const handleTagClick = (tag: Tag, filtered: boolean) => {
+        filtered ?
+            (filteredTags.indexOf(tag) === -1 ? filteredTags.push(tag) : setFilteredTags([...filteredTags]))
+            : (filteredTags.splice(filteredTags.indexOf(tag), 1));
+
+        console.log("Filtered from handleTagClick: ", JSON.stringify(filteredTags, null, 2));
+
+        setFilteredTags([...filteredTags]);
+    }
+
     if(loading) {
         return <Loading />;
     }
@@ -55,9 +66,18 @@ export default function Home() {
        <div className="main-container">
           <div className="tags-section">
              <h5>Tags</h5>
-              <div id="tag-list">
+              <div id="filtered" className="tag-list">
+                  <h6>Filtered Tags</h6>
+                  { filteredTags.length > 0 ? filteredTags.map((tag: Tag) => (
+                      <PostTag onClick={() => handleTagClick(tag, false)} key={tag.id} tag={tag} />
+                  )) : (
+                      <span></span>
+                  )}
+              </div>
+              <div className="tag-list">
+                  <h6>Available Tags</h6>
                   { tags.length > 0 ? tags.map((tag: Tag) => (
-                      <PostTag key={tag.id} id={tag.id} color={tag.color} name={tag.name} created_at={tag.created_at} updated_at={tag.updated_at} />
+                      <PostTag onClick={() => handleTagClick(tag, true)} key={tag.id} tag={tag} />
                   )) : (
                      <span></span>
                   )}
