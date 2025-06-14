@@ -35,8 +35,18 @@
     font-size: smaller;
 }
 
-#tag-list {
+.small-info-container {
+
+}
+
+.tag-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
