@@ -89,9 +89,22 @@ export default function Home() {
                 {latestPosts.length > 0 ? latestPosts.map((post: Post) => (
                     <div key={post.id} className="latest-post">
                         <h3 className="post-header">Title: <Link to={`/post/${post.id}`}>{post.title}</Link></h3>
-                        <div className="small-info">
-                            <p className="posted">Author: <Link to={`/authors/${post.author}`}>{post.author}</Link></p>
-                            <p className="posted">Posted: {post.created_at.toLocaleDateString()}</p>
+                        <div className="small-info-container">
+                            <div className="small-info">
+                                <p className="posted">Author: <Link to={`/authors/${post.author}`}>{post.author}</Link></p>
+                                <p className="posted">Posted: {post.created_at.toLocaleDateString()}</p>
+                            </div>
+
+                            <div className="post-tags">
+                                { post.tags.length > 0 ? (
+                                    post.tags.map((tag: Tag) => (
+                                        <PostTag key={tag.id} tag={tag} />
+                                    ))
+                                ) : (
+                                    <span></span>
+                                )}
+                            </div>
+
                             { post.updated_at.toLocaleDateString() !== post.created_at.toLocaleDateString() ? (
                                 <p className="posted">Updated At: {post.updated_at.toLocaleDateString()}</p>
                             ) : (
