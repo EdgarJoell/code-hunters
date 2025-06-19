@@ -38,8 +38,6 @@ export default function Home() {
                      console.log(JSON.stringify(tag, null, 2));
                      if(!tagsToAdd.has(tag.id)) tagsToAdd.set(tag.id, tag);
                  })
-
-                 console.log(JSON.stringify(tagsToAdd, null, 2));
              });
 
             setTags(Array.from(tagsToAdd.values()));
@@ -52,8 +50,6 @@ export default function Home() {
         filtered ?
             (filteredTags.indexOf(tag) === -1 ? filteredTags.push(tag) : setFilteredTags([...filteredTags]))
             : (filteredTags.splice(filteredTags.indexOf(tag), 1));
-
-        console.log("Filtered from handleTagClick: ", JSON.stringify(filteredTags, null, 2));
 
         setFilteredTags([...filteredTags]);
     }
