@@ -2,15 +2,12 @@ import { getLatestPosts } from "../api/posts-api.ts";
 import {getLatestPostsFromSeed} from "../data/posts-data.ts";
 import {Post} from "../models/Post.ts";
 
-export async function getTheLatestPosts() {
-    let res: Post[];
-    res = await getLatestPosts();
+export async function getTheLatestPosts(): Promise<Post[]> {
+    const postsResponse = await getLatestPosts();
 
-    console.log(res);
-
-    if(!res || res.length === 0) {
-        res = getLatestPostsFromSeed();
+    if(!postsResponse) {
+        return getLatestPostsFromSeed();
     }
 
-    return res;
+    return postsResponse;
 }
