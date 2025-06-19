@@ -5,7 +5,7 @@ import {getTagsFromSeed} from "../data/tag-data.ts";
 export async function getAllTags(): Promise<Tag[]> {
     const apiTags = await getTagsFromApi();
 
-    if(!apiTags) {
+    if(!apiTags || apiTags.length === 0) {
         return getTagsFromSeed();
     }
 

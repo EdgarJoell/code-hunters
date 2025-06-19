@@ -5,7 +5,7 @@ import {Post} from "../models/Post.ts";
 export async function getTheLatestPosts(): Promise<Post[]> {
     const postsResponse = await getLatestPosts();
 
-    if(!postsResponse) {
+    if(!postsResponse || postsResponse.length === 0) {
         return getLatestPostsFromSeed();
     }
 
